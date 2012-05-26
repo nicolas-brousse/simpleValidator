@@ -11,21 +11,16 @@
 
 namespace SimpleValidator\Validators;
 
-use SimpleValidator\BaseValidator;
+use SimpleValidator\Base;
 
 /**
  * @author Frédéric Guillot <contact@fredericguillot.com>
  */
-class Required extends BaseValidator
+class Required extends Base
 {
-    public function execute(array &$data)
+    public function execute(array $data)
     {
-        if (! isset($data[$this->field])) {
-
-            return false;
-        }
-
-        if ($data[$this->field] === null || $data[$this->field] === '') {
+        if (! isset($data[$this->field]) || $data[$this->field] === '') {
 
             return false;
         }

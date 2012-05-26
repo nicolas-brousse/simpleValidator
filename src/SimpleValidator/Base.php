@@ -14,14 +14,14 @@ namespace SimpleValidator;
 /**
  * @author Frédéric Guillot <contact@fredericguillot.com>
  */
-abstract class BaseValidator
+abstract class Base
 {
     protected $field = '';
     protected $error_message = '';
     protected $data = array();
 
 
-    abstract public function execute(array &$data);
+    abstract public function execute(array $data);
 
 
     public function __construct($field, $error_message)

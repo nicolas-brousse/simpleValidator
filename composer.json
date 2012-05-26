@@ -1,0 +1,13 @@
+{
+    "name": "fguillot/simple-validator",
+    "description": "The most easy to use validator library :)",
+    "authors": [
+        {
+            "name": "Frédéric Guillot",
+            "email": "contact@fredericguillot.com"
+        }
+    ],
+    "require": {
+
+    }
+}

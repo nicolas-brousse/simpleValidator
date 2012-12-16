@@ -1,16 +1,16 @@
 Simple Validator - Easy to use validator library for PHP
 ========================================================
 
-Simple Validator is a PHP library to perform data validation. Nothing more, nothing less. 
-You don't need to have a full bloated framework or an overkill ORM to validate data. 
-This library is intented to be used inside your models. 
+Simple Validator is a PHP library to perform data validation. Nothing more, nothing less.
+You don't need to have a full bloated framework or an overkill ORM to validate data.
+This library is intented to be used inside your models.
 
 Features
 --------
 
 - Simple and easy to use
 - No dependencies
-- Validators: AlphaNumeric, Email, Integer, Length, Numeric, Range, Required, Unique
+- Validators: AlphaNumeric, Email, Integer, Length, Numeric, Range, Required, Unique, MacAddress, etc...
 
 
 Requirements
@@ -28,7 +28,7 @@ Frédéric Guillot: [http://fredericguillot.com](http://fredericguillot.com)
 Source code
 -----------
 
-On Github: [https://github.com/fguillot/simpleLogger](https://github.com/fguillot/simpleLogger)
+On Github: [https://github.com/fguillot/simpleLogger](https://github.com/fguillot/simpleValidator)
 
 
 License
@@ -40,9 +40,9 @@ MIT
 Usage
 -----
 
-Your data must be an array, it can be form data, a decoded JSON string or whatever. 
-Each different validator is a simple standalone class. 
-But we use a main class to pass through every validators. 
+Your data must be an array, it can be form data, a decoded JSON string or whatever.
+Each different validator is a simple standalone class.
+But we use a main class to pass through every validators.
 Let's see a basic example:
 
 	use SimpleValidator\Validator;
@@ -87,7 +87,7 @@ Allow only integer, but also strings with digits only.
 
 ### Length
 
-Allow only strings with a correct length. 
+Allow only strings with a correct length.
 
 	new Validators\AlphaLength($field, $error_message, $min, $max);
 
@@ -115,6 +115,6 @@ Check inside a database if the column value is unique or not.
 
 	new Validators\Unique($field, $error_message, PDO $pdo, $table, $primary_key = 'id');
 
-`$pdo` must be an PDO instance, `$table` is the table name and by default the primary key is "id". 
-If the primary key value is not null, we don't check the uniqueness of the column for this row. 
-It's useful if you perform validation for an update. 
+`$pdo` must be an PDO instance, `$table` is the table name and by default the primary key is "id".
+If the primary key value is not null, we don't check the uniqueness of the column for this row.
+It's useful if you perform validation for an update.

@@ -1,7 +1,7 @@
 {
-    "name": "fguillot/simpleValidator",
+    "name": "fguillot/simple-validator",
     "description": "The most easy to use validator library for PHP :)",
-    "homepage": "http://fredericguillot.com/simpleValidator.html",
+    "homepage": "https://github.com/fguillot/simpleValidator",
     "type": "library",
     "license": "MIT",
     "authors": [
